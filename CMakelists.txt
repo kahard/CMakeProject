@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.14)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+project("MyProject")
+
+add_executable(${PROJECT_NAME} "main.cpp"
+    "Loo.cpp"
+    "first_folder/Foo.cpp"
+    "libTest/libTest2/LibTest2.cpp")
+
+# tests
+add_subdirectory("lib/cpputest")
+add_subdirectory("tests")
