@@ -1,16 +1,19 @@
-#include "../libTest/libTest2/LibTest2.h"
 #include "CppUTest/TestHarness.h"
 
-TEST_GROUP(FirstTestGroup) {
+TEST_GROUP(FirstTestGroup) 
+{
+    void setup() 
+    {
 
-  LibTest2 *libTest2 = new LibTest2();
-  void setup() {
-    // Init stuff
-  }
+    }
 
-  void teardown() { delete libTest2; }
+    void teardown() 
+    { 
+
+    }
 };
 
-TEST(FirstTestGroup, FirstTest) { CHECK_TRUE(true); }
-
-TEST(FirstTestGroup, CheckNumber) { CHECK_EQUAL(5, libTest2->getNumber()); }
+TEST(FirstTestGroup, FirstTest) 
+{ 
+    CHECK_TRUE(true); 
+}

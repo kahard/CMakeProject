@@ -5,10 +5,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project("MyProject")
 
-add_executable(${PROJECT_NAME} "main.cpp"
-    "Loo.cpp"
-    "first_folder/Foo.cpp"
-    "libTest/libTest2/LibTest2.cpp")
+add_executable(${PROJECT_NAME} "main.cpp")
 
 # tests
 add_subdirectory("lib/cpputest")
