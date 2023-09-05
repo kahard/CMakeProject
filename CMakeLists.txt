@@ -7,6 +7,9 @@ project("MyProject")
 
 add_executable(${PROJECT_NAME} "main.cpp")
 
-# tests
-add_subdirectory("lib/cpputest")
-add_subdirectory("tests")
+option(BUILD_TESTS "Building tests" OFF)
+
+if(BUILD_TESTS)
+    add_subdirectory("lib/cpputest")
+    add_subdirectory("tests")
+endif()
